@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta information for character set and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Home</title>
+    <!-- External CSS stylesheets and font awesome library -->
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="textAndHeading.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font families Barlow, PT Sans, and Poppins from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=PT+Sans&family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Advertisement in the upper aside -->
+    <aside class="upper_advertisement">
+        Advertisement
+    </aside>
+    
+    <!-- Main content wrapper -->
+    <div class="wrapper_HTML_Home">
+        <main class="wrapper_html_content_home">
+            <!-- Heading section with h1 heading and navigation buttons -->
+            <section class="wrapper-html-home_heading_section">
+                <h1>HTML Document Structure</h1>
+                <div class="HTML_btn_container">
+                    <a href="" class="bg-green">
+                        <i class="fa-solid fa-angle-left"></i>Home
+                    </a>
+                    <a href="introduction.html" class="bg-green">Next
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                </div>
+            </section>
+            
+            <!-- Content section with paragraphs, headings, and line breaks -->
+            <section class="content">
+                <article>
+                    <p>
+                        In HTML, the <code>&lt;p&gt;</code> (paragraph) tag is used to encapsulate text, providing a structured way to present paragraphs of information. The <code>&lt;p&gt;</code> tag is a block-level element that separates text into distinct paragraphs.
+                    </p>
+
+                    <p>
+                        Here's an example of using the <code>&lt;p&gt;</code> tag:
+                    </p>
+
+                    <!-- Example of using the <p> tag -->
+                    <p>This is a paragraph of text in HTML. It provides structure to the content.</p>
+
+                    <h2>Headings (<code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>):</h2>
+
+                    <p>
+                        HTML provides six levels of headings, ranging from <code>&lt;h1&gt;</code> as the largest and most important to <code>&lt;h6&gt;</code> as the smallest. Headings are used to define the structure and hierarchy of the content on a webpage.
+                    </p>
+
+                    <p>
+                        Example of heading tags:
+                    </p>
+
+                    <!-- Example of using heading tags -->
+                    <h1>This is Heading 1</h1>
+                    <h2>This is Heading 2</h2>
+                    <!-- ... -->
+                    <h6>This is Heading 6</h6>
+
+                    <p>
+                        Line Breaks (<code>&lt;br&gt;</code>):
+                    </p>
+
+                    <p>
+                        The <code>&lt;br&gt;</code> tag is used to create a line break within a paragraph, forcing the content that follows to appear on a new line. It is a void or self-closing tag, as it doesn't have a closing tag.
+                    </p>
+
+                    <p>
+                        Example of using the <code>&lt;br&gt;</code> tag:
+                    </p>
+
+                    <!-- Example of using the <br> tag -->
+                    <p>This is the first line.<br>This is the second line.</p>
+                </article>
+            </section>
+        </main>
+    
+        <!-- Advertisement in the lower aside -->
+        <aside class="container_advertisement">
+            Advertisement
+        </aside>
+    </div>
+    
+    <!-- Footer section with navigation links, social media icons, and copyright information -->
+    <footer class="footer">
+        <!-- Top section with menu and forum/about links -->
+        <!-- ... (unchanged) -->
+    </footer>
+
+    <!-- JavaScript scripts -->
+    <script src="../../../js/topHeader.js"></script>
+    <script src="../../../js/script.js" type="module"></script>
+  
+    <!-- Script for copying HTML code -->
+    <script>
+        function copyCode(elementId) {
+            const codeElement = document.getElementById(elementId);
+            const codeText = codeElement.textContent || codeElement.innerText;
+
+            const textarea = document.createElement('textarea');
+            textarea.value = codeText;
+            document.body.appendChild(textarea);
+
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+        }
+    </script>
+</body>
+</html>

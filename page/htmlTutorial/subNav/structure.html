@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Home</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="structure.css">
+        <!--font awesome-->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <!--good font family barlow and poppins-->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow&family=PT+Sans&family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <aside class="upper_advertisement">
+           Advertisement
+    </aside>
+     <div class="wrapper_HTML_Home">
+        <main class="wrapper_html_content_home">
+              <section class="wrapper-html-home_heading_section">
+                <h1>HTML Document Structure</h1>
+                <div class="HTML_btn_container">
+                    <a href="" class="bg-green">
+                          <i class="fa-solid fa-angle-left"></i>Home
+                    </a>
+                    <a href="introduction.html" class="bg-green">Next
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                </div>
+              </section>
+       
+    <section class="content">
+        <article>
+            <p>
+                The structure of an HTML document involves several essential elements. Let's break down the components of the HTML document structure:
+            </p>
+
+            <ol>
+                <li><strong>&lt;!DOCTYPE html&gt; Declaration:</strong> This declaration specifies the HTML version and document type. It informs the web browser about the version of HTML being used, ensuring proper rendering.</li>
+
+                <li><strong>&lt;html&gt; Element:</strong> The <code>&lt;html&gt;</code> element serves as the root of the HTML document. All other elements are nested within this tag. The lang attribute specifies the language of the document, typically using the ISO language code (e.g., "en" for English).</li>
+
+                <li><strong>&lt;head&gt; Section:</strong> Within the <code>&lt;html&gt;</code> tag, the <code>&lt;head&gt;</code> section contains meta-information about the document. This includes elements such as the <code>&lt;meta&gt;</code> tag for character set and viewport settings, and the <code>&lt;title&gt;</code> tag to define the title of the document, which appears in the browser's title bar or tab.</li>
+
+                <li><strong>&lt;body&gt; Section:</strong> The <code>&lt;body&gt;</code> section encapsulates the main content of the HTML document. This is where you include text, images, links, and other elements that make up the visible part of the webpage.</li>
+            </ol>
+
+            <p>
+                Here's an example illustrating the basic structure of an HTML document:
+            </p>
+
+            <pre id="htmlStructure">
+                <code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;HTML Document Structure&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- Your content goes here --&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code>
+            </pre>
+            <button onclick="copyCode('htmlStructure')">Copy HTML Code</button>
+
+        </article>
+    </section>
+
+        </main>
+    
+        <!--advertisement-->
+    
+        <aside class="container_advertisement">
+            Advertisement
+        </aside>
+     </div>
+    <!--Footer-->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="menu">
+                <a href="../../../prprocessingPage/processingPage.html">Quizzes</a>
+                <a href="../../../prprocessingPage/processingPage.html">Exercises</a>
+                <a href="../../../prprocessingPage/processingPage.html">Certificates</a>
+                <a href="../../../prprocessingPage/processingPage.html">Upgrade</a>
+                <a href="../../../prprocessingPage/processingPage.html">Support</a>
+            </div>
+            <div class="forumandAbout">
+                <a href="../../../prprocessingPage/processingPage.html">Forum</a>
+                <a href="../../../prprocessingPage/processingPage.html">About</a>
+            </div>
+        </div>
+            <div class="socialMedia">
+                <a href="https://www.tiktok.com/@cydexcode"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://youtube.com/@cydexcode"><i class="fa-brands fa-youtube"></i></a>
+                  <a href="https://www.facebook.com/cydexcode?mibextid=ZbWKwL"><i class="fa-brands fa-square-facebook"></i></a>
+                  <a href="https://github.com/CydexCode"><i class="fa-brands fa-github"></i></a>
+            </div>
+           
+        
+
+         <div class="footer_description">
+            <p>CydexCode is optimized for learning and training. Examples might be simplified to improve reading and learning.<a href="#">Copyright 1999-2023 </a>  by Refsnes Data.All Rights Reserved.</p>
+        </div>
+
+    </footer>
+
+     <script src="../../../js/topHeader.js"></script>
+     <script src="../../../js/script.js" type="module"></script>
+  
+     <script>
+        function copyCode(elementId) {
+            const codeElement = document.getElementById(elementId);
+            const codeText = codeElement.textContent || codeElement.innerText;
+
+            const textarea = document.createElement('textarea');
+            textarea.value = codeText;
+            document.body.appendChild(textarea);
+
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+
+          
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,370 @@
+
+:root{
+    --bs-green:#198754;
+    --bs-teal:#20c997;
+    --bs-neoWhite:rgb(193, 189, 189);
+    --bs-black:black;
+    --bs-yellow:rgb(219, 219, 128);
+    --bs-greenLight:#09EEE1;
+    --bs-whiteCodeEditer:#E7E9E8;   
+
+    --bs-white:white;
+
+    --bs-yellow-hover:rgb(207, 207, 142);
+    --bs-green-hover:#31a56f;
+    --bs-greenLight-hover:#8ec9c6;
+}
+
+  
+.steadyNavbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+}
+
+/* Adjust the body padding to account for the fixed navbar */
+body {
+ 
+    left: 0;
+    width: 100%;
+    margin: 0;
+    
+   
+}
+
+.horizontal_wrapper{
+    height:35px;
+    width: 100%;
+    background-color:var(white);
+    display: flex;
+    align-items:center;
+    color: var(black);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adjust values as needed */
+    /* overflow-x: auto; Enable horizontal scrolling */
+    overflow:hidden;
+    position: relative;
+    padding: 0px 70px;
+}
+
+.horizontal_Nav_item.active{
+    background-color: var(--bs-green) !important;
+    color: white;
+  }
+  
+
+.horizontal_Nav_left{
+   display: grid;
+   grid-template-columns: repeat(auto-fit,minmax(1fr,100px));
+   grid-auto-flow: column;
+   max-width: 100%;
+   overflow: hidden;
+   height: 100%;
+   white-space: nowrap;
+   overflow-x: scroll;
+   -ms-overflow-style:none;
+   scrollbar-width: none;
+   
+}
+
+.horizontal_Nav_left::-webkit-scrollbar{
+    display: none;
+}
+.horizontal_Nav_left svg{
+    width: 20px;
+    height: 20px;
+    /* padding: 8px; */
+    cursor: pointer;
+    color:black;
+    border-radius:50%;
+}
+
+.horizontal_Nav_left svg:hover{
+    /* background:var(--bs-neoWhite); */
+    width: 25px;
+    height: 25px;
+}
+.left-arrow i{
+     
+    cursor: pointer;
+    position: relative;
+    left: 25px; 
+    display: none;
+}
+
+@media all and (max-width:850px){
+    .left-arrow i{
+        display: block;
+    }
+    
+}
+
+.horizontal_Nav_left .right-arrow{
+    position: absolute;
+    height: 100%;
+    width: 100px;
+    top: 0;
+    display: flex;
+    align-items:center;
+    padding: 0px 7px;
+}
+
+
+.horizontal_Nav_left .left-arrow{
+    position: absolute;
+    height: 100%;
+    width: 10px;
+    top: 0;
+    display: flex;
+    align-items:center;
+   padding-left: 8px;  
+}
+
+
+
+.horizontal_Nav_left .horizontalNav_Btn{
+    justify-content: flex-start;
+    padding: 0px 0px;
+    position: absolute;
+    height: 100%;
+    width: 10px;
+    top: 0;
+    display: flex;
+    align-items:center;
+   padding-left: 8px;
+    
+}
+
+/* .horizontal_Nav_left .right-arrow.active,
+.horizontal_Nav_left .left-arrow.active{
+    display: flex;
+} */
+
+.horizontal_Nav_left .right-arrow{
+    right: 0px;
+    justify-content: flex-end;
+    background-color:white;
+    width: 40px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adjust values as needed */
+}
+
+.horizontal_Nav_left .left-arrow{
+    left: 0px;
+    justify-content: flex-start;
+    background-color:white;
+    width: 75px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adjust values as needed */
+}
+
+.horizontal_Nav_left a{
+    color:currentColor;
+    text-decoration: none;
+    justify-content: center;
+    display: inline-block;
+    
+}
+
+.horizontal_Nav_right{
+  display: flex;
+  align-items:center;
+  margin-left: auto;
+  min-width: 120px;
+  justify-content: space-around;
+}
+
+
+.horizontal_Nav_item{
+    display: inline-block;
+    padding: 7px 20px;
+    font-size: 17px;
+    font-weight:550;
+    text-transform: capitalize;
+    justify-content: center;
+    align-items:center;
+}
+
+
+.horizontalNav_Btn{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    padding: 7px 15px;
+    display: block;
+}
+
+.horizontal_Nav_item:hover{
+    background-color:var(--bs-green);
+    color:white;
+}
+
+.wrapper_body_html{
+    display: fit-content;
+    position: relative;
+    /* grid-template-columns: 210px 1fr; */
+    height: 100%;    
+    height: calc(100vh);
+    max-height: calc(100vh - 48px); /* Set a maximum height equal to the viewport height */
+    top: 15px;
+
+}
+
+
+.wrapper-body_left{
+    background-color:var(--bs-white);
+    height: fit-content;
+    max-height: calc(100vh - 48px);
+    position: relative;
+    padding: 10px;
+    overflow-y: auto;
+    display: none;
+    top: 68px;
+    box-shadow: 0 0 .1px rgba(35, 40, 54, 0.1); /* Added box shadow */
+    border: 0.1px solid black; /* Border color */
+}
+
+
+
+/********side bar******/
+
+.sidebarDisplay{
+    position: absolute;
+    z-index: 10;
+    display: block;
+}
+
+/***********/
+
+@media all and (min-width:1000px){
+    .wrapper_body_html{
+        display: grid;
+        grid-template-columns: 210px 1fr;
+        height: auto;    
+        /* height: calc(100vh); */
+    }
+    .wrapper-body_left{
+        display: block;
+    }
+    .sidebarDisplay{
+        position: relative;
+        z-index: 1;
+        display: block;
+    }
+    .horizontalNav_Btn{
+        display: none;
+    }
+}
+
+.wrapper-body_left_heading{
+    font-size: 25px;
+    padding: 5px;
+}
+
+.horizontal_menu_item_aside{
+    color:var(--bs-black);
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 7px;
+}
+
+.horizontal_menu_item_aside:hover{
+    background-color:var(--bs-green-hover);
+    color:white
+}
+
+/*******iframe_Content_Display***********/
+
+.iframe_Content_Display{
+    width: 100%;
+    height: calc(100vh - 48px);
+    border: none;
+}
+
+/*******HTML_btn_container********/
+
+.HTML_btn_container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.HTML_btn_container a{
+    display: block;
+    font-size: 18px;
+    padding: 7px 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.wrapper-html-home_heading_section{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.wrapper_HTML_Home{
+    display: flex;
+}
+.wrapper_html_content_home{
+    width: 100%;
+}
+
+.wrapper-html-home_heading_section{
+   padding: 30px;
+}
+
+
+
+/**************************************/
+
+.wrapper-html-home_body_section{
+    padding: 30px;
+}
+
+
+
+/**********container Advertisement**********/
+
+.container_advertisement{
+    width: 375px;
+    display: none;
+    text-align: center;
+    padding: 30px;
+}
+
+.upper_advertisement{
+    height: 95px;
+    padding: 80px;
+    text-align: center;
+}
+
+@media all and (min-width:1000px){
+    .container_advertisement{
+        display: block;
+    }
+    
+}
+
+.content_html{
+    padding: 50px;
+    font-size: 18px;
+}
+ 
+.content_html a{
+   padding: 10px 30px;
+   border-radius:5px;
+   text-decoration: none;
+}
+
+.content_html a{
+    font-size: 20px;
+}
+
+.wrapper-body_left a.active {
+    background-color:var(--bs-green); /* Add your desired background color */
+    color: white; /* Add text color for better visibility */
+}
+
+
+/* Example - adjust as needed */
